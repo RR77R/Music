@@ -15,7 +15,7 @@ bot = Client(
     plugins=dict(root="handlers")
 )
 
-Client.join_chat("-1001325518787")
+#Client.join_chat("-1001325518787")
 bot.start()
 run()
 idle()

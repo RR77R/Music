@@ -1,96 +1,39 @@
 {
-    "name": "JMTHON - MUSIC ",
-    "description": "بوت لتشغيل المقاطع الصوتية في المكالمات.",
-    "keywords": ["music", "voice chat", "telegram", "jmthon"],
-    "repository": "https://github.com/RR77R/Music",
-    "stack": "container",
-    "env": {
-        "SESSION_NAME": {
-            "description": "هنا ضع كود سيشن بايروجرام",
-            "required": true
-        },
-        "OWNER_ID": {
-            "description": "هنا ضع ايدي المطور للبوت",
-            "required": true,
-            "value": ""
-        },
-        "ASSID": {
-            "description": "هنا ضع ايدي الحساب المساعد",
-            "required": true,
-            "value": ""
-        },
-        "ASSNAME": {
-            "description": "هنا ضع اسم الحساب المساعد",
-            "required": true,
-            "value": ""
-        },
-        "ASSUSERNAME": {
-            "description": "هنا ضع معرف الحساب المساعد بدون @",
-            "required": true,
-            "value": ""
-        },
-        "BOT_ID": {
-            "description": "هنا ضع ايدي البوت الخاص بك",
-            "required": true,
-            "value": ""
-        },
-        "BOT_USERNAME": {
-            "description": "هنا ضع معرف البوت الخاص بك بدون @",
-            "required": true,
-            "value": ""
-        },
-        "BOT_NAME": {
-            "description": "هنا ضع اسم البوت الخاص بك",
-            "required": true,
-            "value": ""
-        },
-        "HEROKU_API_KEY": {
-            "description": "هيروكو ايبي كي احصل عليه من https://dashboard.heroku.com/account",
-            "required": true,
-            "value": ""
-        },
-        "HEROKU_APP_NAME": {
-            "description": "هنا ضع اسم التطبيق اول اسم وضعته .",
-            "required": true,
-            "value": ""
-        },
-        "API_ID": {
-            "description": "هنا ضع الايبب ايدي احصل عليه من my.telegram.org/apps",
-            "required": true,
-            "value": ""
-        },
-        "API_HASH": {
-            "description": "هنا ضع الايبي هاش احصل عليه من my.telegram.org/apps",
-            "required": true,
-            "value": ""
-        },
-        "SUDO_USERS": {
-            "description": "هنا ضع ايدي الاشخاص الذي تريده كمطور في البوت",
-            "required": true,
-            "value": ""
-        },
-        "DURATION_LIMIT": {
-            "description": "هنا ضع ال الاقصى للتشغيل يفضل عدم تغييره",
-            "required": true,
-            "value": "60"
-        },
-        "BOT_TOKEN": {
-            "description": "هنا ضع توكن البوت الخاص بك",
-            "required": true,
-            "value": ""
-        },
-        "MONGO_DB_URI": {
-            "description": "هنا ضع رابط تخزين mongodb",
-            "required": true,
-            "value": ""
-        }
+  "name": "music",
+  "description": "jmthon music.",
+  "keywords": ["music", "voicechat", "telegram"],
+  "repository": "https://github.com/RR77T/music",
+  "stack": "container",
+  "env": {
+    "SESSION_NAME": {
+      "description": "هنا ضع كود سيشن بايروجرام",
+      "required": true
     },
-    "buildpacks": [
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    "BOT_TOKEN": {
+      "description": "هنا ضع توكن البوت الخاص بك",
+      "required": true
     },
-    {
-      "url": "heroku/python"
+    "BOT_NAME": {
+      "description": "هنا ضع اسم البوت الخاص بك.",
+      "required": false,
+      "value": ""
+    },
+    "API_ID": {
+      "description": "هنا ضع الايبي ايدي الخاص بك",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "هنا ضع الايبي هاش الخاص بك",
+      "required": true
+    },
+    "SUDO_USERS": {
+      "description": "هنا ضع ايدي المطور يمكنك اضافه اكثر من شخص بوضع مسافه بين كل ايدي",
+      "required": true
+    },
+    "DURATION_LIMIT": {
+      "description": "لا تغيرها",
+      "required": true,
+      "value": "120"
     }
-  ]
+  }
 }

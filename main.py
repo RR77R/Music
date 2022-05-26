@@ -15,7 +15,7 @@ bot = Bot(
     plugins=dict(root="handlers")
 )
 
-#bot.join_chat("jmthon")
+bot.join_chat("jmthon")
 bot.start()
 run()
 idle()

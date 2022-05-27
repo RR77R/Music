@@ -90,7 +90,6 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 @Client.on_message(
     command(["تشغيل"])
     & filters.group
-    & ~filters.edited
     & ~filters.forwarded
     & ~filters.via_bot
 )

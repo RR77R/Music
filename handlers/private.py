@@ -7,15 +7,8 @@ import requests
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import IMG, BOT_TOKEN, CHANNEL
 
-@Client.on_message(command("start") & filters.private & ~filters.edited)
+@Client.on_message(command("start") & filters.private)
 async def start_(client: Client, message: Message):
-do = requests.get(f"https://api.telegram.org/bot{BOT_TOKEN}/getChatMember?chat_id=@{CHANNEL}&user_id={message.from_user.id}").text
-    if do.count("left") or do.count("Bad Request: user not found"):
-        keyboard03 = [[InlineKeyboardButton("- اضغط للاشتراك", url='https://t.me/{CHANNEL}')]]
-        reply_markup03 = InlineKeyboardMarkup(keyboard03)
-        await message.reply_text('-عذࢪأ ، عليك الاشتࢪاك في قناة البوت اولا .',
-                                 reply_markup=reply_markup03)
-    else:
     await message.reply_photo(
         photo= f"{IMG}" or "https://telegra.ph/file/b178d8f486c1b085cdb6a.jpg",
         caption=f"""**اهلا بك عزيزي في بوت الميوزك 
@@ -32,7 +25,7 @@ do = requests.get(f"https://api.telegram.org/bot{BOT_TOKEN}/getChatMember?chat_i
     )
     
 
-@Client.on_message(command("الاوامر") & filters.group & filters.private & ~filters.edited)
+@Client.on_message(command("الاوامر") & filters.group & filters.private)
 async def help(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://te.legra.ph/file/5f3af650e4c26e68287a8.jpg",
